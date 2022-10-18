@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height:100vh;
+}
+
+/* grid names*/  
+.content {
+    grid-area: content;
+  }
+.main-nav {
+    grid-area: nav;
+  }
+.main-footer {
+    grid-area: footer;
+  }
+/* grid positions*/
+.wrapper {
+      display:grid;
+      grid-template-columns: 1fr 5fr;
+      grid-template-areas:
+        "header  header"
+        "nav     content"
+        "nav     content"
+        "nav     content"
+        "footer  footer";
+    }
+/* CSS for header */
+.main-head {
+    grid-area: header;
+    font-size: 50px;
+    background-color: #920c0c;
+    padding:20px;
+    color:white;
+    text-align: center;
+}
+/* CSS for main */
+nav {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: white;
+      gap:20px;
+      
+      font-size:30px;
+      background-color: #360c92;
+      padding-top:30px;
+      
+      padding-left: 50px;
+      padding-right: 30px;
+
+     
+
+}
+nav a {
+    text-decoration: none;
+    color: white;
+    
+  }
+nav, .content {
+   
+   min-height: 100vh;
+}
+.projects{
+    padding-left:20px;
+    font-size:20px;
+}
+
+.content{
+    padding-top:15px;
+    padding-left: 50px;
+    background-color: rgb(184, 243, 223);
+    padding-bottom: 30px;
+
+
+}
+.schedule{
+    padding-left: 20px;
+}
+.button{
+    border-radius: 8px;
+    font-weight: bold;
+    padding: 5px;
+           
+}
+.button:hover, img:hover{
+    cursor:pointer;
+}
+.add-schedule-form{
+    display:flex;
+    flex-direction: column;
+    width:300px;
+    border-radius: 8px;
+    border-style: solid;
+    padding:30px;
+    margin-top: 50px;
+    background-color: coral;
+    
+    gap:5px;
+
+}
+.add-project-form{
+    border-radius: 8px;
+    border-style: solid;
+    padding:10px;
+ 
+    
+    
+}
+.button:active
+{
+  background-color: #00CCC0;
+  border: 1px #000000 solid;
+}
+h1{
+    font-size: 30px;
+}
+table, th, td {
+    border:1px solid black;
+    
+    border-collapse:collapse;
+  }
+td, th {
+    
+    text-align: left;
+    padding: 8px;
+  }
+  th{
+    background-color: yellow;
+  }
+.projects-pair{
+    display:flex;
+    justify-content: space-between;
+}
+.project-sidebar-delete{
+    flex-grow: 0;
+    flex: 0 0 auto;
+    height:24px;
+    width:24px;
+}
+
+  
+/* CSS for footer */
+.main-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #920c0c;
+    padding: 20px;
+    color: white;
+    margin: 0px;
+    border:0px;
+  }
